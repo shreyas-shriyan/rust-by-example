@@ -2,7 +2,8 @@
 fn main() {
     // hello_world()
     // add_numbers()
-    for_loop()
+    // for_loop()
+    reverse_string()
 }
 
 // fn hello_world() {
@@ -15,9 +16,16 @@ fn main() {
 //     println!("The sum is {}", a + b)
 // }
 
-fn for_loop(){
-    // =can be used to include end number
-    for x in 1..=5{
-        println!("the loop is {x}")
-    }
+// fn for_loop(){
+//     // =can be used to include end number
+//     for x in 1..=5{
+//         println!("the loop is {x}")
+//     }
+// }
+
+fn reverse_string(){
+    let name: String = "shreyas".to_string();
+    let reversed_name: String = name.chars().rev().collect();
+    println!("{reversed_name}");
 }
+    
