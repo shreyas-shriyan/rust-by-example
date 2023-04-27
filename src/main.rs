@@ -1,9 +1,12 @@
+use std::{fs, path::Path};
+
 // This is the main function.
 fn main() {
     // hello_world()
     // add_numbers()
     // for_loop()
-    reverse_string()
+    // reverse_string()
+    read_file()
 }
 
 // fn hello_world() {
@@ -23,9 +26,14 @@ fn main() {
 //     }
 // }
 
-fn reverse_string(){
-    let name: String = "shreyas".to_string();
-    let reversed_name: String = name.chars().rev().collect();
-    println!("{reversed_name}");
+// fn reverse_string(){
+//     let name: String = "shreyas".to_string();
+//     let reversed_name: String = name.chars().rev().collect();
+//     println!("{reversed_name}");
+// }
+
+fn read_file() {
+    let path = Path::new("src/assets/sample_text_file.tx");
+    let text = fs::read_to_string(path).expect("invalid file");
+    println!("{text}");
 }
-    
