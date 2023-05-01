@@ -1,4 +1,4 @@
-use std::{fs, path::Path};
+// use std::{fs, path::Path};
 
 // This is the main function.
 fn main() {
@@ -6,7 +6,8 @@ fn main() {
     // add_numbers()
     // for_loop()
     // reverse_string()
-    read_file()
+    // read_file()
+    read_user_input()
 }
 
 // fn hello_world() {
@@ -32,8 +33,15 @@ fn main() {
 //     println!("{reversed_name}");
 // }
 
-fn read_file() {
-    let path = Path::new("src/assets/sample_text_file.tx");
-    let text = fs::read_to_string(path).expect("invalid file");
-    println!("{text}");
+// fn read_file() {
+//     let path = Path::new("src/assets/sample_text_file.tx");
+//     let text = fs::read_to_string(path).expect("invalid file");
+//     println!("{text}");
+// }
+
+fn read_user_input(){
+   let mut line = String::new();
+   println!("Enter your name :");
+   std::io::stdin().read_line(&mut line).unwrap();
+   println!("Hello, {}", line);
 }
