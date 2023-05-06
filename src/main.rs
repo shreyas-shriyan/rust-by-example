@@ -7,7 +7,8 @@ fn main() {
     // for_loop()
     // reverse_string()
     // read_file()
-    read_user_input()
+    // read_user_input()
+    arrays_and_slices()
 }
 
 // fn hello_world() {
@@ -39,9 +40,24 @@ fn main() {
 //     println!("{text}");
 // }
 
-fn read_user_input(){
-   let mut line = String::new();
-   println!("Enter your name :");
-   std::io::stdin().read_line(&mut line).unwrap();
-   println!("Hello, {}", line);
+// fn read_user_input(){
+//    let mut line = String::new();
+//    println!("Enter your name :");
+//    std::io::stdin().read_line(&mut line).unwrap();
+//    println!("Hello, {}", line);
+// }
+
+fn arrays_and_slices() {
+    // arrays cannot be modified
+    // they are of fixed size
+    let array: [i32; 5] = [1, 2, 3, 4, 5];
+    for item in array {
+        println!("item is {}", item)
+    }
+
+    // slices can be are part of an array
+    let slice = &array[1..3];
+    for item in slice {
+        println!("slice item is {item}")
+    }
 }
